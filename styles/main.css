@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 body {
-    font-family: Lucida Console, Monaco, monospace;
+    font-family: 'Raleway', sans-serif;
     background-color: #09111f;
 }
 .navigation {
