@@ -3,6 +3,8 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: #09111f;
 }
+
+/* Navigation Menu styling */
 .navigation {
     margin-top: 0.5em;
 }
@@ -12,6 +14,8 @@ body {
 .navigation a {
     color: white;
 }
+
+/* Generic container sizing */
 .container {
     margin-top: 1em;
     padding: 0.5em 1em;
@@ -20,24 +24,48 @@ body {
     background-color: #192c4f;
     border: solid #192c4f 1px;
     border-radius: 10px;
-    transition: transform .2s;
-}
-.container:hover {
-    transform: scale(1.01);
 }
 .info-tile {
     width: 80%;
 }
-#header #title-header {
-    color: #42b983;
-    font-size: 1.4em;
+#title-header {
+    font-size: 1.8em;
+    color: #2aa76f;
+    margin-top: .5em;
+}
+
+/* Image styling */
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 20%;
+}
+/* Styling for lists */
+.list-title {
+    color: #2aa76f;
 }
 .info-list {
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
-    margin: 0;
-    padding: 0 0 10px 0;
-    text-align: center;
+    width: 90%;
+    margin: .5em auto;
+    padding: 0;
+    justify-content: center;
 }
+.info-list li {
+    padding-right: .5em;
+}
+
+/* Separate items by commas */
+.comma li::after {
+    content: ",";
+}
+.comma li.last:after {
+    content: "";
+}
+
+/* Card styling */
 .card-container {
     width: 80%;
     margin: auto;
@@ -50,9 +78,10 @@ body {
     margin: 0.5em;
     padding: 1em;
 }
-.card:hover {
-    transform: scale(1.02);
+.card .logo {
+    font-size: 1.7em;
 }
+/* background */
 .bg-custom {
     background-color: #192c4f;
 }
@@ -62,6 +91,18 @@ footer {
     color: white;
 }
 
+/* Media query for Responsive Design */
 @media all and (max-width: 1000px) { 
-    .card { flex: 1 1 50%; }
+    .card { 
+        flex: 1 1 50%; 
+    }
+    .info-list {
+        flex-direction: column;
+    }
+    .info-list li {
+        padding: 0;
+    }
+    .comma li::after {
+        content: none;
+    }
 }
