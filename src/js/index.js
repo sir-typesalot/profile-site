@@ -5,3 +5,4 @@ function loadData() {
 function changeDate() {
     document.getElementById("year-text").innerHTML = new Date().getFullYear();
 }
+
